@@ -1,0 +1,20 @@
+
+syntax ="proto3";
+option java_package = "com.example.generic_paradigm.protobuf";
+option java_outer_classname = "StudentSerializable";
+//注意proto文件不能喝 java_outer_classname 名字一样，否则无法编译成功
+message Student {
+    string name = 1;
+    string sex = 2;
+    int32 age = 3;
+    // required 指定该字段必须赋值 禁止为空
+    repeated Course courses = 4;// 使用repeated指定字段为集合
+}
+
+// 一个proto文件中可以同时定义多个message类型，生成代码时根据生成代码的目标语言不通，处理的方式也不太一样
+message Course {
+    string name = 1;
+    float score = 2;
+}
+
+
