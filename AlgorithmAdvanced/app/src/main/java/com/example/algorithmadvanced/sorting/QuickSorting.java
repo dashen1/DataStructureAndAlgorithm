@@ -111,10 +111,10 @@ public class QuickSorting {
 
   //在arr[L...R]范围上，拿arr[R]作划分值
   public static int[] partition(int[] arr, int L, int R) {
-    //
+    // 把相同的数都放在中间
     int lessR = L - 1;
     int moreL = R;
-    int index = L;//当前数从L开始遍历
+    int index = L;// 当前数从L开始遍历
     while (index < moreL) {
       if (arr[index] < arr[R]) {
         swap(arr, ++lessR, index++);

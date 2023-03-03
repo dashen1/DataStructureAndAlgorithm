@@ -11,7 +11,7 @@ public class ClientSocket {
     public static void main(String[] args) throws IOException {
         /**
          * BIO是面向流的 1、直接从网卡读写数据 2、阻塞式 3、服务器一个线程只能服务一个客户端
-         * NIO是面向缓冲区的 1、中间有个缓冲区，冲缓冲区读写数据 2、非阻塞式 3、服务器一个线程可以服务多个客户端
+         * NIO是面向缓冲区的 1、中间有个缓冲区，往缓冲区读写数据 2、非阻塞式 3、服务器一个线程可以服务多个客户端
          * NIO三大核心组件：
          * Selector
          * Channel
